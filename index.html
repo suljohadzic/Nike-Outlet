@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nike Outlet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Nike Outlet</h1>
+  <div class="cart-icon" onclick="openCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+</header>
+
+<main class="product-grid">
+
+  <div class="product">
+    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/87803c3a-6f4b-4b7b-900c-e730b0559a93/air-max-270-mens-shoes-KkLcGR.png" alt="Nike Air Max 270" />
+    <h2>Nike Air Max 270</h2>
+    <p>€89.99</p>
+    <button onclick="addToCart('Nike Air Max 270', 89.99)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/80f60b7d-98a4-4643-8101-395f1d8d9a65/sportswear-club-mens-t-shirt-KjT0bs.png" alt="Nike T-Shirt" />
+    <h2>Nike Sportswear T-Shirt</h2>
+    <p>€24.99</p>
+    <button onclick="addToCart('Nike T-Shirt', 24.99)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/672f2853-f6d6-41a3-8805-865b8cfb1725/sportswear-club-mens-shorts-9MdmHJ.png" alt="Nike Shorts" />
+    <h2>Nike Club Shorts</h2>
+    <p>€29.99</p>
+    <button onclick="addToCart('Nike Shorts', 29.99)">Add to Cart</button>
+  </div>
+
+</main>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-content">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: €<span id="cart-total">0.00</span></p>
+    <button onclick="goToCheckout()">Proceed to Checkout</button>
+    <button onclick="closeCart()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout – Nike Outlet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Checkout</h1>
+</header>
+
+<main class="product-grid">
+  <form onsubmit="submitOrder(event)">
+    <h2>Billing Info</h2>
+    <input type="text" placeholder="Full Name" required /><br><br>
+    <input type="email" placeholder="Email Address" required /><br><br>
+    <input type="text" placeholder="Shipping Address" required /><br><br>
+
+    <h3>Payment Instructions</h3>
+    <p>Please transfer the total to:</p>
+    <p><strong>IBAN:</strong> LT81 3250 0307 2751 9610</p>
+    <p><strong>Card (Visa/Mastercard):</strong> 5354 5631 7318 5776</p>
+    <p>Or use SOFORT Überweisung through your bank.</p>
+
+    <br>
+    <button type="submit">Confirm Order</button>
+  </form>
+</main>
+
+<script>
+function submitOrder(e) {
+  e.preventDefault();
+  alert("Order submitted. Please proceed with the payment to complete your order.");
+  localStorage.removeItem("cart");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
